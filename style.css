@@ -87,6 +87,13 @@ body {
 body{
   top: 40px;
 }
+#btn {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:none;
+    font-weight: bold;
+    color: #f7f7f7;
+      }
 
 /* ---------- Responsive Adjustments ---------- */
 
@@ -116,3 +123,4 @@ body{
     padding: 0.8em;
   }
 }
+
