@@ -36,8 +36,9 @@ body {
   max-width: 40em;
   height: auto;
   padding: 1em;
-  border: 3px solid green;
+  border: 3px solid rgb(128, 36, 0);
   font-size: 1rem;
+  border-radius: 3em;
 }
 
 #container {
