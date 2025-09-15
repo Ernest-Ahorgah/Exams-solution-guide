@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  font-family: Raleway, sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+}
+.content {
+  width: 95%;
+  max-width: 40ch;
+  padding: 3em 1em;
+}
+.marquee {
+  position: relative;
+  width: 100%;
+  height: 2em;
+  font-size: 5em;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.marquee_text {
+  position: absolute;
+  min-width: 100%;
+  white-space: nowrap;
+  animation: marquee 16s infinite linear;
+}
+
+#btn {
+  width: 100%;
+  max-width: 40em;
+  height: auto;
+  padding: 1em;
+  border: 3px solid green;
+  font-size: 1rem;
+}
+
+#container {
+  width: 100%;
+  max-width: 60em;
+  height: auto;
+  min-height: 30em;
+  border-width: 5px;
+  padding: 1em;
+}
+#container:hover {
+  cursor: pointer;
+}
+
+@keyframes marquee {
+  from {
+    translate: 70%;
+  }
+  to {
+    translate: -70%;
+  }
+}
+.marquee_blur {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  background-image: linear-gradient(to right, white, 1rem, transparent 50%), 
+                    linear-gradient(to left, white, 1rem, transparent 50%);
+  filter: contrast(15);
+}
+.marquee_blur p {
+  filter: blur(0.07em);
+}
+.marquee_clear {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.text {
+  margin-block: 2em;
+  text-align: center;
+}
+body{
+  top: 40px;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  body {
+    font-size: 20px;
+  }
+  .marquee {
+    font-size: 3.5em;
+  }
+  #btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+  .marquee {
+    font-size: 2.5em;
+  }
+  #btn {
+    font-size: 0.8rem;
+    padding: 0.8em;
+  }
+}
